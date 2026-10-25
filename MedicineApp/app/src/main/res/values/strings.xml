@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Medicine Reminder</string>
+    <string name="tagline">Your health, on schedule</string>
+    <string name="welcome">Welcome to Medicine Reminder</string>
+
+    <string name="btn_medicines">My Medicines</string>
+    <string name="btn_history">Medicine History</string>
+    <string name="btn_diary">Health Diary</string>
+
+    <string name="title_medicines">My Medicines</string>
+    <string name="title_add_medicine">Add Medicine</string>
+    <string name="title_edit_medicine">Edit Medicine</string>
+    <string name="title_medicine_details">Medicine Details</string>
+    <string name="title_history">Medicine History</string>
+    <string name="title_diary">Health Diary</string>
+    <string name="title_add_entry">Add Diary Entry</string>
+    <string name="title_edit_entry">Edit Diary Entry</string>
+
+    <string name="add_medicine">Add Medicine</string>
+    <string name="add_entry">Add Entry</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="hint_name">Medicine name</string>
+    <string name="hint_dosage">Dosage (e.g. 500 mg)</string>
+    <string name="label_frequency">Frequency per day</string>
+    <string name="hint_time_1">Reminder time 1</string>
+    <string name="hint_time_2">Reminder time 2</string>
+    <string name="hint_time_3">Reminder time 3</string>
+    <string name="hint_start">Start date</string>
+    <string name="hint_end">End date</string>
+    <string name="hint_notes">Notes (optional)</string>
+    <string name="hint_date">Date</string>
+    <string name="hint_title">Title</string>
+    <string name="hint_symptoms">Symptoms</string>
+    <string name="cd_pick_date">Pick a date</string>
+
+    <string name="err_required">This field is required</string>
+    <string name="err_time_duplicate">Choose a different time</string>
+    <string name="err_date_invalid">Choose a valid date</string>
+    <string name="err_end_before_start">End date must not be before start date</string>
+    <string name="err_end_past">End date is already in the past</string>
+
+    <string name="empty_medicines">No medicines yet.\nTap Add Medicine to create one.</string>
+    <string name="empty_history">No history yet.\nTaken and Missed doses will appear here.</string>
+    <string name="empty_diary">No diary entries yet.\nTap Add Entry to write your first one.</string>
+
+    <string name="medicines_saved">Medicines saved: %1$d</string>
+    <string name="doses_today">Doses scheduled today: %1$d</string>
+    <string name="status_summary">Taken %1$d   •   Missed %2$d   •   Pending %3$d</string>
+    <string name="no_doses_today">Today\'s status: no doses scheduled</string>
+    <string name="status_today_prefix">Today\'s status: %1$s</string>
+    <string name="next_reminder">Next reminder: %1$s (%2$s) at %3$s</string>
+    <string name="no_more_today">Next reminder: none left today</string>
+    <string name="latest_diary">Latest diary entry: %1$s — %2$s</string>
+    <string name="no_diary">Latest diary entry: none yet</string>
+
+    <string name="frequency_line">Frequency: %1$s</string>
+    <string name="dosage_line">Dosage: %1$s</string>
+    <string name="times_line">Reminder times: %1$s</string>
+    <string name="course_line">Course: %1$s to %2$s</string>
+    <string name="notes_line">Notes: %1$s</string>
+    <string name="none">None</string>
+    <string name="history_details">%1$s  •  %2$s  •  %3$s</string>
+
+    <string name="confirm_delete_medicine_title">Delete medicine?</string>
+    <string name="confirm_delete_medicine_msg">Its reminders will be cancelled. Past history records are kept.</string>
+    <string name="confirm_delete_entry_title">Delete entry?</string>
+    <string name="confirm_delete_entry_msg">This diary entry will be permanently removed.</string>
+
+    <string name="channel_name">Medicine reminders</string>
+    <string name="channel_desc">Reminders to take your medicines</string>
+    <string name="notif_title">Time to take %1$s</string>
+    <string name="notif_text">Dosage: %1$s  •  Scheduled for %2$s</string>
+    <string name="action_taken">Taken</string>
+    <string name="action_missed">Missed</string>
+
+    <string name="perm_notif_denied">Notifications are off, so reminders will not be shown.</string>
+    <string name="perm_exact_title">Allow exact alarms</string>
+    <string name="perm_exact_msg">Android needs your permission to deliver reminders at the exact minute. Without it reminders may arrive late.</string>
+    <string name="open_settings">Open settings</string>
+    <string name="later">Later</string>
+    <string name="exact_delayed">Exact alarms are not allowed, so reminders may be delayed.</string>
+
+    <string name="saved">Saved</string>
+    <string name="deleted">Deleted</string>
+    <string name="db_error">Could not save. Please try again.</string>
+
+    <string-array name="frequency_options">
+        <item>Once a day</item>
+        <item>Twice a day</item>
+        <item>Three times a day</item>
+    </string-array>
+</resources>

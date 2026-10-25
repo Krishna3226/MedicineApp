@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#00796B</color>
+    <color name="primary_dark">#004D40</color>
+    <color name="accent">#26A69A</color>
+    <color name="white">#FFFFFF</color>
+    <color name="bg">#F5F7F7</color>
+    <color name="taken">#2E7D32</color>
+    <color name="missed">#C62828</color>
+    <color name="pending">#EF6C00</color>
+    <color name="text_primary">#263238</color>
+    <color name="text_secondary">#607D8B</color>
+</resources>
