@@ -37,8 +37,24 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.7'
+
+
+      - name: Find Android project
+        run: |
+          find . -name settings.gradle.kts -o -name settings.gradle
+      
       - name: Build debug APK
-        run: gradle assembleDebug --stacktrace --info
+        run: |
+          cd MedicineApp
+          gradle assembleDebug --stacktrace
+      
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: MedicineReminder-debug-apk
+          path: MedicineApp/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+            
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
