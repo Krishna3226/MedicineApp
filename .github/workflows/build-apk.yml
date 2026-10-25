@@ -41,24 +41,31 @@ jobs:
 
       - name: Find Android project
         run: |
-          find . -name settings.gradle.kts -o -name settings.gradle
-      
+          echo "Current directory:"
+          pwd
+          echo "Project settings files:"
+          find . -maxdepth 4 \( -name settings.gradle.kts -o -name settings.gradle \) -print
+
       - name: Build debug APK
         run: |
-          cd MedicineApp
-          gradle assembleDebug --stacktrace
-      
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: MedicineReminder-debug-apk
-          path: MedicineApp/app/build/outputs/apk/debug/app-debug.apk
-          if-no-files-found: error
-            
+          if [ -f settings.gradle.kts ] || [ -f settings.gradle ]; then
+            gradle assembleDebug --stacktrace
+          elif [ -f MedicineApp/settings.gradle.kts ] || [ -f MedicineApp/settings.gradle ]; then
+            cd MedicineApp
+            gradle assembleDebug --stacktrace
+          else
+            echo "Gradle project root not found."
+            exit 1
+          fi
+
+      - name: Find generated APK
+        if: always()
+        run: find . -type f -name "*.apk" -print
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: MedicineReminder-debug-apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: "**/build/outputs/apk/debug/*.apk"
           if-no-files-found: error
+
